@@ -4,7 +4,7 @@ export default class NeuralPersist {
   private path = require('path');
 
   private fs = require('fs');
-  private address = this.path.join(__dirname, 'neuraldata.json')
+  private address = this.path.join(__dirname, '../data/neuraldata15_15_15_15.json')
 
   constructor() {
 

@@ -25,9 +25,9 @@ const optimizeInputValues = ({ day, month, hour, temp, houseTemp }: INNInput): n
 const optimizeOutputValues = (NNOut: number[]): INNOutput => {
   console.log("Counting done, optimizing result")
   console.log(NNOut)
-  const windows = NNOut[0] > 0.4 ? 1 : 0;
+  const windows = Math.round(NNOut[0]*100)/100;
   const blinders = NNOut[1] > 0.5 ? 1 : 0;
-  const heat = NNOut[2];
+  const heat =Math.round(NNOut[2]*100)/100;
 
   return new NNOutput(windows, blinders, heat);
 }

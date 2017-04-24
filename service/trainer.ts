@@ -1,5 +1,6 @@
 import NeuralPersist from "./neuralPersistance";
 import { Architect, Trainer, Network } from "synaptic";
+import { trainingSetApril } from "../data/trainingSet";
 import LSTM = Architect.LSTM;
 
 /**
@@ -16,19 +17,19 @@ export const trainNN = () => {
 
     if (!lastKnown) {
         console.log('No network found, creating new')
-        weaconPiBrain = new LSTM(6, 9, 9, 9, 9, 3);
+        weaconPiBrain = new LSTM(5, 15, 15, 15, 15, 3);
     } else {
         console.log('Network found, reusing')
         weaconPiBrain = Network.fromJSON(lastKnown);
     }
     let trainer = new Trainer(weaconPiBrain)
-
-    trainer.train(mayTrainingSet, {
-        iterations: 20000,
+    console.log("Started learning")
+    trainer.train(trainingSetApril, {
+        iterations: 5000,
         shuffle: true,
-        rate: 0.2,
-        error: .05,
-        log: 1000
+        rate: 0.1,
+        error: .001,
+        log: 100
     });
 
     new NeuralPersist().persistFile(weaconPiBrain);
