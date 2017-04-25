@@ -2,7 +2,7 @@
   "name": "weanen",
   "version": "1.0.0",
   "description": "Simple Neural net module",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "start": "npm run build:live",
     "build:live": "nodemon",
@@ -30,6 +30,7 @@
   "devDependencies": {
     "@types/node": "^7.0.13",
     "nodemon": "^1.11.0",
-    "ts-node": "^3.0.2"
+    "ts-node": "^3.0.2",
+    "typescript": "^2.2.2"
   }
 }
