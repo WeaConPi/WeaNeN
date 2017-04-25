@@ -21,7 +21,7 @@ app.get('/calculate', (request, response) => {
     console.log("triggered calculate")
     console.log(day, month, hour, temp, houseTemp);
     const result = CalculateResult(day, month, hour, temp, houseTemp);
-    response.send(JSON.stringify(result))
+    response.send(result)
 });
 
 app.listen(PORT, () => {
