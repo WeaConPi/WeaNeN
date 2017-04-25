@@ -1,4 +1,5 @@
 import { Network, Architect } from "synaptic";
+import { manualBrain } from "../data/HerokuCheat";
 import LSTM = Architect.LSTM;
 export default class NeuralPersist {
     private path = require('path');
