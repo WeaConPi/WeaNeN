@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run build:live",
     "build:live": "nodemon",
-    "heroku-postbuild": "tsc index.ts --outDir build"
+    "heroku-postbuild": "tsc index.ts --outDir build --target es6 --module commonjs"
   },
   "repository": {
     "type": "git",
