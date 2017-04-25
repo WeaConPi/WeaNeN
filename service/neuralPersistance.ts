@@ -19,8 +19,7 @@ export default class NeuralPersist {
     public readFile() {
         if (process.env.herokuEnv) {
             console.log("heroku env, loading directly json")
-            const brain = require('../data/neuraldata15_15_15_15.json')
-            return brain;
+            return manualBrain;
         }
         console.log('reading file from ')
         console.log(this.address)
