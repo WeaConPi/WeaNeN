@@ -11,6 +11,9 @@ app.get('/trigger', (request, response) => {
     trainNN();
     response.send("training shall be done")
 });
+app.get('/hello', (request, response) => {
+    response.send("hello")
+});
 
 app.get('/calculate', (request, response) => {
     const day = Number(request.param('day'));

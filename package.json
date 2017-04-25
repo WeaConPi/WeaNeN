@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run build:live",
-    "build:live": "nodemon"
+    "build:live": "nodemon",
+    "heroku-postbuild": "tsc index.ts --outDir build"
   },
   "repository": {
     "type": "git",
@@ -23,12 +24,12 @@
     "@types/synaptic": "^1.0.1",
     "body-parser": "^1.16.1",
     "express": "^4.15.2",
-    "synaptic": "^1.0.10"
+    "synaptic": "^1.0.10",
+    "typescript": "^2.2.2"
   },
   "devDependencies": {
     "@types/node": "^7.0.13",
     "nodemon": "^1.11.0",
-    "ts-node": "^3.0.2",
-    "typescript": "^2.2.2"
+    "ts-node": "^3.0.2"
   }
 }
