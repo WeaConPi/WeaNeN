@@ -9,7 +9,7 @@
     "heroku-postbuild": "tsc index.ts --outDir build --target es6 --module commonjs"
   },
   "engines": {
-    "node": "7.x"
+    "node": "6.9.4"
   },
   "repository": {
     "type": "git",
