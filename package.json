@@ -8,6 +8,9 @@
     "build:live": "nodemon",
     "heroku-postbuild": "tsc index.ts --outDir build --target es6 --module commonjs"
   },
+  "engines": {
+    "node": "7.x"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/WeaConPi/WeaNeN.git"
